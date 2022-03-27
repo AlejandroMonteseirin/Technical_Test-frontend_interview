@@ -69,12 +69,17 @@ export class ViewComponent implements OnInit {
 
   /*Pagination*/
   paginate(event:LazyLoadEvent){
-    if(event.first==0){
-      return ;
-    }
-    if(event.first){
+    console.log("event", event);
+
+    if(event.first==0 && this.page!=1){
+      this.page=1;
+    }else if(event.first){
       this.page=event.first/50+1; //50 items per page
+    }else{
+      return ; //case lazy loading
     }
+    console.log("page", this.page);
+
     this.search(false);
     
   }
