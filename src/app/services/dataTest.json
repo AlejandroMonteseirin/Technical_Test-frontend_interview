@@ -1,0 +1,155 @@
+{
+    "totalItems":157520,
+    "endIndex":50,
+    "startIndex":1,
+    "itemsPerPage":20,
+    "items":[
+       {
+          "essay":[
+             
+          ],
+          "place_of_publication":"Newark, Ohio",
+          "start_year":1892,
+          "publisher":"Advocate Print. Co.",
+          "county":[
+             "Licking"
+          ],
+          "edition":null,
+          "frequency":"Daily",
+          "url":"https://chroniclingamerica.loc.gov/lccn/sn88078778.json",
+          "id":"/lccn/sn88078778/",
+          "subject":[
+             "Licking County (Ohio)--Newspapers.",
+             "Newark (Ohio)--Newspapers.",
+             "Ohio--Licking County.--fast--(OCoLC)fst01207827",
+             "Ohio--Newark.--fast--(OCoLC)fst01207972"
+          ],
+          "city":[
+             "Newark"
+          ],
+          "language":[
+             "English"
+          ],
+          "title":"The Daily advocate.",
+          "holding_type":[
+             "Microfilm Master",
+             "Microfilm Service Copy"
+          ],
+          "end_year":1894,
+          "alt_title":[
+             "Sunday advocate"
+          ],
+          "note":[
+             "Description based on: Vol. 33, no. 39 (Nov. 19, 1892).",
+             "On Sundays published as: Sunday advocate, Sept. 3, 1893-Jan. 22, 1894."
+          ],
+          "lccn":"sn88078778",
+          "state":[
+             "Ohio"
+          ],
+          "place":[
+             "Ohio--Licking--Newark"
+          ],
+          "country":"Ohio",
+          "type":"title",
+          "title_normal":"daily advocate.",
+          "oclc":"18390979"
+       },
+       {
+          "essay":[
+             
+          ],
+          "place_of_publication":"Newark, Ohio",
+          "start_year":1882,
+          "publisher":"J.A. Caldwell",
+          "county":[
+             "Licking"
+          ],
+          "edition":null,
+          "frequency":"Daily (except Sun)",
+          "url":"https://chroniclingamerica.loc.gov/lccn/sn88078779.json",
+          "id":"/lccn/sn88078779/",
+          "subject":[
+             "Licking County (Ohio)--Newspapers.",
+             "Newark (Ohio)--Newspapers.",
+             "Ohio--Licking County.--fast--(OCoLC)fst01207827",
+             "Ohio--Newark.--fast--(OCoLC)fst01207972"
+          ],
+          "city":[
+             "Newark"
+          ],
+          "language":[
+             "English"
+          ],
+          "title":"The Daily advocate.",
+          "holding_type":[
+             "Microfilm Service Copy"
+          ],
+          "end_year":1883,
+          "alt_title":[
+             
+          ],
+          "note":[
+             "Weekly ed.: Newark advocate (Newark, Ohio : 1837)."
+          ],
+          "lccn":"sn88078779",
+          "state":[
+             "Ohio"
+          ],
+          "place":[
+             "Ohio--Licking--Newark"
+          ],
+          "country":"Ohio",
+          "type":"title",
+          "title_normal":"daily advocate.",
+          "oclc":"18390969"
+       },
+       {
+          "essay":[
+             
+          ],
+          "place_of_publication":"Paris, Tex.",
+          "start_year":1800,
+          "publisher":"Chester & Hodges",
+          "county":[
+             "Lamar"
+          ],
+          "edition":null,
+          "frequency":"Daily",
+          "url":"https://chroniclingamerica.loc.gov/lccn/sn88083865.json",
+          "id":"/lccn/sn88083865/",
+          "subject":[
+             
+          ],
+          "city":[
+             "Paris"
+          ],
+          "language":[
+             "English"
+          ],
+          "title":"Daily advocate.",
+          "holding_type":[
+             
+          ],
+          "end_year":1896,
+          "alt_title":[
+             "Daily advocate and evening dispatch"
+          ],
+          "note":[
+             "Description based on: Vol. 1, no. 116 (July 6, 1892).",
+             "Entitled \"Daily advocate and evening dispatch\", Apr. 30-Aug. 21, 1894."
+          ],
+          "lccn":"sn88083865",
+          "state":[
+             "Texas"
+          ],
+          "place":[
+             "Texas--Lamar--Paris"
+          ],
+          "country":"Texas",
+          "type":"title",
+          "title_normal":"daily advocate.",
+          "oclc":"18175786"
+       }
+    ]
+ }

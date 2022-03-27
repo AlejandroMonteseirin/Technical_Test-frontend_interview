@@ -4,7 +4,7 @@ import { Newspaper } from '../models/newspaper';
 import { Observable } from 'rxjs';
 import { addMultipleNewsPaper, resetNewspapers } from '../ngrx-store/actions';
 import { ApiService } from '../services/api.service';
-import { ParseService } from '../parse.service';
+import { ParseService } from '../services/parse.service';
 import {LazyLoadEvent, MessageService} from 'primeng/api';
 import { Table } from 'primeng/table'; 
 

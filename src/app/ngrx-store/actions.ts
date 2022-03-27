@@ -1,6 +1,7 @@
 
 import { createAction, props } from '@ngrx/store';
 import { Newspaper } from '../models/newspaper';
+
 export const addNewsPaper = createAction(
     '[Newspaper List] Add Newspaper',
     props<{ newNewspaper: Newspaper }>()
@@ -16,7 +17,3 @@ export const resetNewspapers = createAction(
     
 );
 
-export const retrievedNewspaperList = createAction(
-    '[Newspaper List] Retrieve Books Newspaper',
-    props<{ newspapers: ReadonlyArray<any> }>()
-);

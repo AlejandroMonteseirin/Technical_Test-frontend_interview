@@ -2,8 +2,6 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent.component';
-import { SimpleCardPageComponent } from './simple-card-page/simple-card-page.component';
-import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 import {  ReactiveFormsModule } from '@angular/forms';
 import {MessageService} from 'primeng/api';
 import {ToastModule} from 'primeng/toast';
@@ -16,8 +14,7 @@ describe('AppComponent', () => {
         RouterTestingModule,ToastModule,ReactiveFormsModule,InputMaskModule,InputTextModule
       ],
       declarations: [
-        AppComponent,ParentComponent,SimpleCardPageComponent,
-        CheckoutFormComponent,
+        AppComponent,ParentComponent
       ],providers: [
         MessageService 
       ],
@@ -30,10 +27,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'AlejandroMonteseirin_checkout_form'`, () => {
+  it(`should have as title 'alejandro-monteseirin-frontend_interview'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('AlejandroMonteseirin_checkout_form');
+    expect(app.title).toEqual('alejandro-monteseirin-frontend_interview');
   });
 
 });

@@ -8,7 +8,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 
 export class AppComponent {
-  title = 'AlejandroMonteseirin_checkout_form';
+  title = 'alejandro-monteseirin-frontend_interview';
 
   constructor(private primengConfig: PrimeNGConfig) {}
 

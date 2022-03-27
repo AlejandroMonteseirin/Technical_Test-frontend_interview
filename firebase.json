@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/alejandro-monteseirin-frontend_interview",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

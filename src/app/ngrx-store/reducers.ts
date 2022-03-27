@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { Newspaper } from '../models/newspaper';
-import { addMultipleNewsPaper, addNewsPaper, resetNewspapers, retrievedNewspaperList } from './actions';
+import { addMultipleNewsPaper, addNewsPaper, resetNewspapers } from './actions';
 
 const initialState: Array<Newspaper> = [];
 
