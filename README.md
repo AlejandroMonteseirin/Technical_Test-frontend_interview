@@ -75,3 +75,4 @@ When you push search, the view component make a call using the Api service, whic
 - There are a little Karma/Jasmine tests, results and the end of the README. For run the tests, run the command "ng test" in the root of the project. (a good test example is in services/parse.service.spect.ts which tests the parser with a example JSON)
 
 
+![testResults](https://user-images.githubusercontent.com/33956661/160302199-6b430414-6c41-4338-b630-95b600696a0f.png)
