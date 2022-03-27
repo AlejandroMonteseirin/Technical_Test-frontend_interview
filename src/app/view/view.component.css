@@ -34,3 +34,7 @@
     }
 
 }
+
+:host ::ng-deep  .p-toast {
+        width: 20rem;/*no overflow in mobile*/
+    }

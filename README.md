@@ -73,5 +73,6 @@ When you push search, the view component make a call using the Api service, whic
 - There are a Pop-Up for showing the rest of the data, when clicked in "show more info"
 - There are a functional pagination system using the Api "page" parameter
 - There are a little Karma/Jasmine tests, results and the end of the README. For run the tests, run the command "ng test" in the root of the project. (a good test example is in services/parse.service.spect.ts which tests the parser with a example JSON)
+- The aplication is fully responsive
 
 

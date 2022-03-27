@@ -1,4 +1,6 @@
-
+<div style="margin:2em">
+    <p-toast position="top-right"></p-toast>
+</div>
 
 <h2 style="text-align: center;">
     Newspaper visor
@@ -6,10 +8,10 @@
 
 
 <div class="inputs grid">
-    <div class="col-12 md:col-6 forminput"  >
+    <div class="col-12 md:col-6 forminput">
         <input type="text" pInputText [(ngModel)]="filter" placeholder="Search by" />
     </div>
-    <div class="col-12 md:col-6 formbutton" >
+    <div class="col-12 md:col-6 formbutton">
         <button pButton pRipple type="button" label="Search" class="p-button-raised" (click)="search(true)"></button>
     </div>
 </div>
@@ -20,8 +22,8 @@
 
 <p-progressBar *ngIf="loading" mode="indeterminate"></p-progressBar>
 
-<p-table #tabla [value]="(newsPapers$ | async)!" [lazyLoadOnInit]="false"  [lazy]="true" [rows]="50"  [paginator]="true" (onLazyLoad)="paginate($event)" [totalRecords]="totalRecords"  [loading]="loading"
-currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+<p-table #tabla [value]="(newsPapers$ | async)!" [lazyLoadOnInit]="false" [lazy]="true" [rows]="50" [paginator]="true"
+    (onLazyLoad)="paginate($event)" [totalRecords]="totalRecords" [loading]="loading">
     <!-- the '!' discards the null value when waiting the observable https://angular.io/guide/template-typecheck#strict-null-checks-->
     <ng-template pTemplate="header">
         <tr>
@@ -33,7 +35,8 @@ currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-paper>
-        <tr *ngIf="paper && paper.title"> <!-- not display undefined values of the observable-->
+        <tr *ngIf="paper && paper.title">
+            <!-- not display undefined values of the observable-->
             <td>{{paper?.title}}</td>
             <td>{{paper?.country}}</td>
             <td>{{paper?.frequency}}</td>
