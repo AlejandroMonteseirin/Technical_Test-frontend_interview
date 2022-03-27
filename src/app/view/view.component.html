@@ -1,0 +1,124 @@
+
+
+<h2 style="text-align: center;">
+    Newspaper visor
+</h2>
+
+
+<div class="inputs grid">
+    <div class="col-12 md:col-6 forminput"  >
+        <input type="text" pInputText [(ngModel)]="filter" placeholder="Search by" />
+    </div>
+    <div class="col-12 md:col-6 formbutton" >
+        <button pButton pRipple type="button" label="Search" class="p-button-raised" (click)="search(true)"></button>
+    </div>
+</div>
+
+
+
+
+
+<p-progressBar *ngIf="loading" mode="indeterminate"></p-progressBar>
+
+<p-table #tabla [value]="(newsPapers$ | async)!" [lazyLoadOnInit]="false"  [lazy]="true" [rows]="50"  [paginator]="true" (onLazyLoad)="paginate($event)" [totalRecords]="totalRecords"  [loading]="loading"
+currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+    <!-- the '!' discards the null value when waiting the observable https://angular.io/guide/template-typecheck#strict-null-checks-->
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Title</th>
+            <th>Country</th>
+            <th>Frequency</th>
+            <th>More info...</th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-paper>
+        <tr *ngIf="paper && paper.title"> <!-- not display undefined values of the observable-->
+            <td>{{paper?.title}}</td>
+            <td>{{paper?.country}}</td>
+            <td>{{paper?.frequency}}</td>
+            <td (click)="showDialog(paper)" class="link">Click here for more info</td>
+
+        </tr>
+    </ng-template>
+</p-table>
+
+
+<!-- DIALOG more info buttom-->
+<p-dialog header="{{tempNewspaper?.title}}" [(visible)]="display" [modal]="true" [style]="{width: widthModal}">
+    <div class="grid">
+        <div class="col-12 md:col-6">
+            <div *ngIf="tempNewspaper && tempNewspaper.alt_title && tempNewspaper.alt_title.length>0">
+                <b>Alternative Titles:</b> {{tempNewspaper.alt_title.join(', ')}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.city && tempNewspaper.city.length>0">
+                <b>Cities:</b> {{tempNewspaper.city.join(', ')}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.country">
+                <b>Country:</b> {{tempNewspaper.country}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.county && tempNewspaper.county.length>0">
+                <b>Counties:</b> {{tempNewspaper.county.join(', ')}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.end_year">
+                <b>End year:</b> {{tempNewspaper.end_year}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.essay && tempNewspaper.essay.length>0">
+                <b>Essays:</b> {{tempNewspaper.essay.join(', ')}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.frequency">
+                <b>Frequency:</b> {{tempNewspaper.frequency}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.holding_type && tempNewspaper.holding_type.length>0">
+                <b>Holding types:</b> {{tempNewspaper.holding_type.join(', ')}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.id">
+                <b>ID:</b> {{tempNewspaper.id}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.language && tempNewspaper.language.length>0">
+                <b>Languages:</b> {{tempNewspaper.language.join(', ')}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.lccn">
+                <b>LCCN:</b> {{tempNewspaper.lccn}}
+            </div>
+        </div>
+        <div class="col-12 md:col-6">
+            <div *ngIf="tempNewspaper && tempNewspaper.note && tempNewspaper.note.length>0">
+                <b>Notes:</b> {{tempNewspaper.note.join(', ')}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.oclc">
+                <b>OCLC:</b> {{tempNewspaper.oclc}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.place && tempNewspaper.place.length>0">
+                <b>Places:</b> {{tempNewspaper.place.join(', ')}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.place_of_publication">
+                <b>Place of publication:</b> {{tempNewspaper.place_of_publication}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.publisher">
+                <b>Publisher:</b> {{tempNewspaper.publisher}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.start_year">
+                <b>Start Year:</b> {{tempNewspaper.start_year}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.state && tempNewspaper.state.length>0">
+                <b>States:</b> {{tempNewspaper.state.join(', ')}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.subject && tempNewspaper.subject.length>0">
+                <b>Subjects:</b> {{tempNewspaper.subject.join(', ')}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.title">
+                <b>Title:</b> {{tempNewspaper.title}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.title_normal">
+                <b>Title Normal:</b> {{tempNewspaper.title_normal}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.type">
+                <b>Type:</b> {{tempNewspaper.type}}
+            </div>
+            <div *ngIf="tempNewspaper && tempNewspaper.url" style="word-break: break-all;">
+                <b>URL:</b> <a href="{{tempNewspaper.url}}">{{tempNewspaper.url}}</a>
+            </div>
+        </div>
+    </div>
+</p-dialog>

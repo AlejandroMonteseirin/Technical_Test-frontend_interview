@@ -1,0 +1,36 @@
+.inputs {
+    background-color: whitesmoke;
+    border-radius: 3em;
+    border-color: gray;
+    margin: 1em;
+}
+
+.link {
+    color: #0000EE;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 769px) {
+    .forminput {
+        text-align: center;
+    }
+
+    .formbutton {
+        text-align: center;
+
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .forminput {
+        text-align: right;
+
+    }
+
+    .formbutton {
+        text-align: left;
+
+    }
+
+}
